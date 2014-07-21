@@ -37,12 +37,10 @@ $(document).ready(function(){
 					? ((((upper/lower*240)/size)/bpm * i)*1000).toFixed(0)
 					: (((upper/lower*240)/size)/bpm * i).toFixed(3).replace(/\./, ',');
 				hz = (bpm/((upper/lower*240)/size) / i).toFixed(2);
-				if(size == 1){
-					$(this).html('<b class="ms">'+ms+' ms</b><br/><i class="hz">'+hz+' hz</i>');
-				}
-				else{
-					$(this).html('<b class="ms">'+ms+'</b><br/><i class="hz">'+hz+'</i>');
-				}
+				var output = size == 1
+					? '<b class="ms">'+ms+' ms</b><br/><i class="hz">'+hz+' hz</i>'
+					: '<b class="ms">'+ms+'</b><br/><i class="hz">'+hz+'</i>';
+				$(this).html(output);
 			});
 		});
 	};
