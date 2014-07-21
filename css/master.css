@@ -1,0 +1,68 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 14px;
+  background: #e7eb7f;
+  color: #033e2b; }
+  body > header {
+    text-align: center;
+    background: #f08b3e;
+    padding: 0.25em 0; }
+  body > footer {
+    text-align: center; }
+    body > footer img {
+      height: 3em;
+      width: auto; }
+  body > section article {
+    margin-bottom: 1em; }
+    body > section article header {
+      padding: 1em 0;
+      background: #f08b3e; }
+
+a {
+  color: #7b441a; }
+
+#inputs {
+  text-align: center; }
+
+#bpm {
+  width: 4em; }
+
+#time_sig > * {
+  vertical-align: middle;
+  display: inline-block; }
+
+#upper, #lower {
+  width: 2em; }
+
+#tables {
+  display: table;
+  margin: 0 auto; }
+
+table {
+  display: table-cell;
+  max-width: 90%;
+  height: 100%; }
+  table tr {
+    display: flex; }
+    table tr * {
+      vertical-align: middle; }
+    table tr td, table tr th {
+      flex: 1;
+      text-align: center;
+      background: #f0c93e;
+      margin: 1px; }
+    table tr th {
+      margin-bottom: 4px;
+      background: #97a39f; }
+      table tr th:nth-child(even) {
+        background: #7ac0aa; }
+    table tr td {
+      min-height: 3em; }
+    table tr:nth-child(even) td {
+      background: #dbbd53; }
+  table.division {
+    font-weight: bold; }
+    table.division tr td {
+      background: #97a39f; }
+    table.division tr:nth-child(even) td {
+      background: #7ac0aa; }

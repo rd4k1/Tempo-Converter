@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Tempo Converter</title>
+	<script src="js/jquery-2.1.1.min.js"></script>
+	<script src="js/functions.js"></script>
+	<link rel="stylesheet" href="css/fonts.css">
+	<link rel="stylesheet" href="css/master.css">
+</head>
+<body>
+	<header>
+		<h1>BPM to ms/hz - Tempo Converter</h1>
+	</header>
+	<section id="inputs">
+		<div>
+			<span>BPM:</span>
+			<input type="number" min="20" id="bpm" value="120">
+		</div>
+		<div id="time_sig">
+			<span>Time Signature:</span>
+			<div>
+				<input type="number" id="upper" value="4"><br/>
+				<input type="number" id="lower" value="4">
+			</div>
+		</div>
+	</section>
+	<section id="tables">
+		<table class="division">
+			<tr>
+				<th style="visibility: hidden;">0</th>
+			</tr>
+			<tr>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>32</td>
+			</tr>
+		</table>
+		<table class="grid">
+			<tr id="head">
+			</tr>
+			<tr>
+				<td>1</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>13</td>
+				<td>14</td>
+				<td>15</td>
+				<td>16</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>13</td>
+				<td>14</td>
+				<td>15</td>
+				<td>16</td>
+				<td>17</td>
+				<td>18</td>
+				<td>19</td>
+				<td>20</td>
+				<td>21</td>
+				<td>22</td>
+				<td>23</td>
+				<td>24</td>
+			</tr>
+			<tr>
+				<td>1</td>
+				<td>2</td>
+				<td>3</td>
+				<td>4</td>
+				<td>5</td>
+				<td>6</td>
+				<td>7</td>
+				<td>8</td>
+				<td>9</td>
+				<td>10</td>
+				<td>11</td>
+				<td>12</td>
+				<td>13</td>
+				<td>14</td>
+				<td>15</td>
+				<td>16</td>
+				<td>17</td>
+				<td>18</td>
+				<td>19</td>
+				<td>20</td>
+				<td>21</td>
+				<td>22</td>
+				<td>23</td>
+				<td>24</td>
+				<td>25</td>
+				<td>26</td>
+				<td>27</td>
+				<td>28</td>
+				<td>29</td>
+				<td>30</td>
+				<td>31</td>
+				<td>32</td>
+			</tr>
+		</table>
+		<table class="division">
+			<tr>
+				<th style="visibility: hidden;">0</th>
+			</tr>
+			<tr>
+				<td>1/1</td>
+			</tr>
+			<tr>
+				<td>1/2</td>
+			</tr>
+			<tr>
+				<td>1/2 trip</td>
+			</tr>
+			<tr>
+				<td>1/4</td>
+			</tr>
+			<tr>
+				<td>1/2 quin</td>
+			</tr>
+			<tr>
+				<td>1/4 trip</td>
+			</tr>
+			<tr>
+				<td>1/2 sept</td>
+			</tr>
+			<tr>
+				<td>1/8</td>
+			</tr>
+			<tr>
+				<td>1/8 trip</td>
+			</tr>
+			<tr>
+				<td>1/16</td>
+			</tr>
+			<tr>
+				<td>1/16 trip</td>
+			</tr>
+			<tr>
+				<td>1/32</td>
+			</tr>
+		</table>
+	</section>
+	<section>
+		<article>
+			<header>What is this about?</header>
+			<section>
+				This is a tempo calculator I programmed. I often used <a href="web.forret.com/tools/bpm_tempo.asp">Peter Forret's Tempo Calculator</a> but I wanted something I could use offline so I programmed this HTML5 & jQuery tool that requires no sending, posting and server-side languages. It works in any modern browser including mobile browsers.
+			</section>
+		</article>
+		<article>
+			<header>Conversion Formulas</header>
+			<section>
+				I often which various calculators also included the formulas, so here you go:
+				<ul>
+					<li>
+						Milliseconds: [Time Sig divided]*240/{note division}/BPM*1000 = ms
+						<ul>
+							<li>
+								e.g. [4/4]*240/{16}/120*1000 = 125 ms
+							</li>
+						</ul>
+					</li>
+					<li>
+						Hertz: BPM/([Time Sig divided]*240/{note division}) = hz
+						<ul>
+							<li>
+								e.g. 140/([3/4]*240/{8}) = 6.22 hz
+							</li>
+						</ul>
+					</li>
+				</ul>
+			</section>
+		</article>
+	</section>
+	<footer>
+		<div>
+			Programming by Michael A. Scott (<a href="http://www.glyphicdesign.com">Glyphic Design</a>/<a href="http://www.justmuziq.com/artist/lion">Lion @ JUST Muziq</a>)
+		</div>
+		<div>
+			<a href="http://www.w3.org/html/logo/">
+				<img src="img/html5-badge-h-css3-semantics-storage.png" width="197" height="64" alt="HTML5 Powered with CSS3 / Styling, Semantics, and Offline &amp; Storage" title="HTML5 Powered with CSS3 / Styling, Semantics, and Offline &amp; Storage">
+			</a>
+		</div>
+	</footer>
+</body>
+</html>
